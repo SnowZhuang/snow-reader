@@ -25,5 +25,5 @@ $.ajax({
  */
 $.ajax({
 	"url":"/snow-reader/categorys/6",
-	"method":"post"
+	"method":"delete"
 })

@@ -22,8 +22,23 @@
     },
     {
       "categoryName": "科技2",
-      "id": 5
+      "id": 6
+    },
+    {
+      "categoryName": "雪雪",
+      "id": 10
     }
   ],
-  "subscribeItems": []
+  "subscribeItems": [  	
+  	{
+  	 "id": 0,
+  	 "subscribeName":"知乎",
+  	 "subscribeInstruction":"知乎内容简介"
+  	},
+  	{
+  	 "id": 1,
+  	 "subscribeName":"百度",
+  	 "subscribeInstruction":"百度内容简介"
+  	}
+  ]
 }
