@@ -1,0 +1,29 @@
+{
+  "categorys": [
+    {
+      "id": 0,
+      "categoryName": "资讯"
+    },
+    {
+      "id": 1,
+      "categoryName": "博客"
+    },
+    {
+      "id": 2,
+      "categoryName": "学习"
+    },
+    {
+      "id": 3,
+      "categoryName": "娱乐"
+    },
+    {
+      "id": 4,
+      "categoryName": "杂志"
+    },
+    {
+      "categoryName": "科技2",
+      "id": 5
+    }
+  ],
+  "subscribeItems": []
+}
