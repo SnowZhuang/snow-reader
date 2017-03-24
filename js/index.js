@@ -21,3 +21,32 @@ $.ajax({
 		$("#subcribe-contain").append(panel);
 	})
 });
+
+
+$("xxx").on("click",function(){
+	XXX
+})
+var TestObject = function(){
+	this.allEvents = {};
+}
+
+
+TestObject.prototype.on = function(eventName,callback) {
+	var events = allEvents[eventName];
+	if(events){
+		events = [];
+		allEvents[eventName] = events;
+	}
+	events.push(callback);
+};
+var testObject = new TestObject();
+testObject.on("click",function(){XXX})
+testObject.on("click",function(){XXX})
+
+
+click(event) = function(){
+	var callbacks = testObject.events['click'];
+	$.each(callbacks,function(index,callback){
+		callback(event);
+	});
+}

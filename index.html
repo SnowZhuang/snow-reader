@@ -7,10 +7,10 @@
     <script src="/lib/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
     <script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
-        .container{ border:solid 1px #000;}
-        .navgation-header {}
+        .jumbotron{ background-color:#000; color: #fff; margin-bottom: 0px; }
+        .navigation{ margin-top:5px;  margin-bottom: :5px;}
         .navgation-header ul li{ background-color:black;border:solid 1px #666; font-size:20px; }
-      .navgation-header ul li a{ text-decoration:none; color:#FFF;}
+        .navgation-header ul li a{ text-decoration:none; color:#FFF;}
         .book-instruction{ padding:40px;}
         .book-footer{ padding:10px;}
         
@@ -19,23 +19,24 @@
   
   <body>
     <div class="container" >
-      <div class="row header ">
-        <div class="col-lg-12 jumbotron text-center " >
-          <h1>狗耳朵</h1>
-          <p>全文RSS推送服务，支持Kindle、多看和Nook等移动电子阅读设备</p>
-          <div class="navgation-header">
+        <div class="row header ">
+          <div class="col-lg-12 jumbotron text-center " >
+              <h1>狗耳朵</h1>
+              <p>全文RSS推送服务，支持Kindle、多看和Nook等移动电子阅读设备</p>
+          </div>
+        </div>      
+        <div class="col-lg-8 col-lg-offset-2 navigation">
             <ul class="nav nav-pills nav-justified ">
               <li role="presentation" ><a href="#">Home</a></li>
-              <li role="presentation" > <a href="#">推荐</a></li>
-              <li role="presentation" > <a href="#">全部</a></li>
+              <li role="presentation" ><a href="#">推荐</a></li>
+              <li role="presentation" ><a href="#">全部</a></li>
               <li role="presentation" ><a href="#">排行版</a></li>
               <li role="presentation" ><a href="#">杂志</a></li>
               <li role="presentation" ><a href="#">我的订阅</a></li>
             </ul>
-          </div>
-          
-        </div>
-      </div>
+        </div> 
+        
+      
       <div class="row">
         <div class="col-lg-3" >
           <ul id="category-left-bar" class="nav nav-tabs nav nav-stacked text-center">
