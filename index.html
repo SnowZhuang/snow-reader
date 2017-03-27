@@ -1,69 +1,125 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>TODO LIST</title>
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap/dist/css/bootstrap.css">
-    <script src="/lib/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
     <style type="text/css">
-        .jumbotron{ background-color:#000; color: #fff; margin-bottom: 0px; }
-        .navigation{ margin-top:5px;  margin-bottom: :5px;}
-        .navgation-header ul li{ background-color:black;border:solid 1px #666; font-size:20px; }
-        .navgation-header ul li a{ text-decoration:none; color:#FFF;}
-        .book-instruction{ padding:40px;}
-        .book-footer{ padding:10px;}
-        
+    .container{ background-image:url("images/dog.jpg");}
+    .header{position:relative;}
+    .user{ color: red; position: absolute; top:10px; right:50px; } 
+    .user span{ margin-right: 20px; cursor: pointer;}
+    .jumbotron{ background-color: black;color: white; margin-bottom: 0px; }
+    .navigation{ margin:5px 0px;}
+    
+    .navigation div ul li a{ text-decoration: none; color:#000;font-size: 18px; font-weight:bold; }
+    .subscribeArea{opacity:0.9; filter: alpha(opacity=90); background-color: #aaa; padding: 20px 20px 20px 10px; }
+    .subscribeArea ul { margin:20px 0px;}
+    .subscribeArea ul li { border-radius: 10px; }
+    .subscribeArea ul li a{ color:#000;font-size: 16px; font-weight:bold; }
+    #right-column{ padding:10px; }
+    .bookContain{ border-bottom: solid 2px #eee; padding: 10px; }
+    .book-instruction{clear:both; padding: 10px 50px; margin-top:10px;}
     </style>
   </head>
-  
   <body>
     <div class="container" >
-        <div class="row header ">
-          <div class="col-lg-12 jumbotron text-center " >
-              <h1>狗耳朵</h1>
-              <p>全文RSS推送服务，支持Kindle、多看和Nook等移动电子阅读设备</p>
-          </div>
-        </div>      
-        <div class="col-lg-8 col-lg-offset-2 navigation">
-            <ul class="nav nav-pills nav-justified ">
-              <li role="presentation" ><a href="#">Home</a></li>
-              <li role="presentation" ><a href="#">推荐</a></li>
-              <li role="presentation" ><a href="#">全部</a></li>
-              <li role="presentation" ><a href="#">排行版</a></li>
-              <li role="presentation" ><a href="#">杂志</a></li>
-              <li role="presentation" ><a href="#">我的订阅</a></li>
-            </ul>
-        </div> 
-        
-      
-      <div class="row">
-        <div class="col-lg-3" >
-          <ul id="category-left-bar" class="nav nav-tabs nav nav-stacked text-center">
+      <div class="row header ">
+        <div class=" col-lg-12 jumbotron text-center " >
+          <h1>狗耳朵</h1>
+          <p>全文RSS推送服务，支持Kindle、多看和Nook等移动电子阅读设备</p>
+        </div>
+         <div class="user">
+          <span><a>登录</a></span>
+          <span><a>注册</a></span>
+        </div>
+      </div>
+      <div class="row navigation">
+        <div class=" col-lg-8 col-lg-offset-2">
+          <ul class=" nav nav-pills nav-justified col-lg-9">
+            <li role="presentation" ><a href="#">推荐</a></li>
             <li role="presentation" ><a href="#">全部</a></li>
-            <!-- <li role="presentation"><a href="#">资讯</a></li>
-            <li role="presentation"><a href="#">博客</a></li>
-            <li role="presentation"><a href="#">学习</a></li>
-            <li role="presentation"><a href="#">娱乐</a></li>
-            <li role="presentation"><a href="#">杂志</a></li>
-            <li role="presentation"><a href="#">文学</a></li>
-            <li role="presentation"><a href="#">科技</a></li>
-            <li role="presentation"><a href="#">财经</a></li>
-            <li role="presentation"><a href="#">生活</a></li>
-            <li role="presentation"><a href="#">文化</a></li>
-            <li role="presentation"><a href="#">公众号</a></li>
-            <li role="presentation"><a href="#">知乎专栏</a></li> -->
+            <li role="presentation" > <a href="#">排行榜</a></li>
+            <li role="presentation" ><a href="#">杂志</a></li>
+            <li role="presentation" ><a href="#">我的订阅</a></li>
           </ul>
         </div>
-        <div id="subcribe-contain" class="col-lg-9  panel panel-default" >
-          <div class="panel " style="overflow:hidden;">
-            <div class="book-name pull-left " style="padding:10px">mLook 邀请码</div>
-            <div  class="pull-right"> <button class="btn btn-default  " >订阅</button> </div>
-            <div class="book-instruction" > mLook提供精致的书籍和服务</div>
-            <div class="book-footer pull-right ">g12:45 ? 27082 人订阅 ? RSS</div>
+      </div>
+      
+      <div class="row subscribeArea">
+        <div class="left-column col-lg-3" >
+          <input type="text" class="form-control" placeholder="搜索" style="position: relative;">
+          <span class=" glyphicon glyphicon-search" aria-hidden="true" style="position: absolute; top: 10px; right:30px;">
+          </span>
+          </input>
+          <!-- <form  role="search" class="clearfix" >
+            <div class=" pull-left" style="width:80%;">
+              
+            </div>
+            <button type="submit" class="btn btn-default pull-right" style="width:20%;" >搜索</button>
+          </form> -->
+          
+          
+          <ul  id="categoryList" class="nav nav-pills nav-stacked text-center ">
+            <li role="presentation"><a href="#">全部</a></li>
+            <!-- <li role="presentation"><a href="#">×ÊÑ¶</a></li>
+            <li role="presentation"><a href="#">²©¿Í</a></li>
+            <li role="presentation"><a href="#">Ñ§Ï°</a></li>
+            <li role="presentation"><a href="#">ÓéÀÖ</a></li>
+            <li role="presentation"><a href="#">ÔÓÖ¾</a></li>
+            <li role="presentation"><a href="#">ÎÄÑ§</a></li>
+            <li role="presentation"><a href="#">¿Æ¼¼</a></li>
+            <li role="presentation"><a href="#">²Æ¾­</a></li> -->
+          </ul>
+        </div>
+        <div id="rbight-column" class=" col-lg-9 panel panel-default"  >
+          <div class="bookContain">
+            <div class="book-name pull-left ">
+              <img src="images/1.jpg" width="20px" height="20px">
+              <a >书籍名字</a>
+            </div>
+            <div  class="pull-right">  <button class="btn btn-default  " >订阅</button></div>
+            <div class="book-instruction " >
+              功能介绍：小道消息,只有小道消息才能拯救中国互联网;只有小道消息才能拯救中国创业者. 不关注小道消息,关注谁?
+            </div>
+            <div class="book-subscribeMessage" style="text-align: right;">时间.订阅人数
+            </div>
+          </div>
+          <div class="bookContain">
+            <div class="book-name pull-left ">
+              <img src="images/1.jpg" width="20px" height="20px">
+              <a >书籍名字</a>
+            </div>
+            <div  class="pull-right">  <button class="btn btn-default  " >订阅</button></div>
+            <div class="book-instruction " >
+              功能介绍：小道消息,只有小道消息才能拯救中国互联网;只有小道消息才能拯救中国创业者. 不关注小道消息,关注谁?
+            </div>
+            <div class="book-subscribeMessage" style="text-align: right;">时间.订阅人数
+            </div>
+          </div>
+          <div class="bookContain">
+            <div class="book-name pull-left ">
+              <img src="images/1.jpg" width="20px" height="20px">
+              <a >书籍名字</a>
+            </div>
+            <div  class="pull-right">  <button class="btn btn-default  " >订阅</button></div>
+            <div class="book-instruction " >
+              功能介绍：小道消息,只有小道消息才能拯救中国互联网;只有小道消息才能拯救中国创业者.
+            </div>
+            <div class="book-subscribeMessage" style="text-align: right;">时间.订阅人数
+            </div>
           </div>
         </div>
-      </div>    
+      </div>
     </div>
-  </body>
+  </div>
+  <form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Search">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</body>
+<script src="/lib/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>
