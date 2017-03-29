@@ -29,16 +29,23 @@
       "id": 10
     }
   ],
-  "subscribeItems": [  	
-  	{
-  	 "id": 0,
-  	 "subscribeName":"知乎",
-  	 "subscribeInstruction":"知乎内容简介"
-  	},
-  	{
-  	 "id": 1,
-  	 "subscribeName":"百度",
-  	 "subscribeInstruction":"百度内容简介"
-  	}
+  "subscribeItems": [
+    {
+      "id": 0,
+      "subscribeName": "知乎",
+      "subscribeInstruction": "知乎内容简介"
+    },
+    {
+      "id": 1,
+      "subscribeName": "百度",
+      "subscribeInstruction": "百度内容简介"
+    }
+  ],
+  "userInfos": [
+    {
+      "userName": "snow@qq.com",
+      "password": "123456",
+      "id": 1
+    }
   ]
 }
