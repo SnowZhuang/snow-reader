@@ -11,7 +11,9 @@ $.ajax({
 
 /**
  * 新增
- */
+ */var category = {
+		"categoryName":"科技2"
+	};
 $.ajax({
 	"url":"/snow-reader/categorys",
 	"method":"post",

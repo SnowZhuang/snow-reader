@@ -21,24 +21,94 @@
       "categoryName": "杂志"
     },
     {
-      "categoryName": "科技",
-      "id": 6
+      "id": 5,
+      "categoryName": "文学"
     },
     {
-      "categoryName": "雪雪",
-      "id": 10
+      "id": 6,
+      "categoryName": "科技"
+    },
+    {
+      "id": 7,
+      "categoryName": "财经"
+    },
+    {
+      "id": 8,
+      "categoryName": "生活"
+    },
+    {
+      "id": 9,
+      "categoryName": "文化"
+    },
+    {
+      "id": 10,
+      "categoryName": "公众号"
+    },
+    {
+      "id": 11,
+      "categoryName": "知乎专栏"
     }
   ],
   "subscribeItems": [
     {
       "id": 0,
-      "subscribeName": "知乎",
-      "subscribeInstruction": "知乎内容简介"
+      "categoryID": 0,
+      "subscribeName": "机器学习日报",
+      "subscribeInstruction": "机器学习日报的最新更新"
     },
     {
       "id": 1,
-      "subscribeName": "百度",
-      "subscribeInstruction": "百度内容简介"
+      "categoryID": 0,
+      "subscribeName": "TechCrunch",
+      "subscribeInstruction": "Startup and Technology News"
+    },
+    {
+      "id": 2,
+      "categoryID": 0,
+      "subscribeName": "Humor - The New Yorker",
+      "subscribeInstruction": "Online version of the weekly magazine, with current articles, cartoons, blogs, audio, video, slide shows, an archive of articles and abstracts back to 1925."
+    },
+    {
+      "id": 3,
+      "categoryID": 1,
+      "subscribeName": "T知乎专栏",
+      "subscribeInstruction": "知乎于 2013 年 7 月 18 日上线测试的内容创作产品，目前处于内测阶段。"
+    },
+    {
+      "id": 4,
+      "categoryID": 1,
+      "subscribeName": "终点书栈",
+      "subscribeInstruction": "一些文字，改变一生"
+    },
+    {
+      "id": 5,
+      "categoryID": 2,
+      "subscribeName": "沪江德语",
+      "subscribeInstruction": "沪江德语:德语学习门户"
+    },
+    {
+      "id": 6,
+      "categoryID": 2,
+      "subscribeName": "沪江法语",
+      "subscribeInstruction": "沪江法语最新更"
+    },
+    {
+      "id": 7,
+      "categoryID": 3,
+      "subscribeName": "网易每日轻松一刻",
+      "subscribeInstruction": "网易每日轻松一刻"
+    },
+    {
+      "id": 8,
+      "categoryID": 3,
+      "subscribeName": "Releaselog Applications",
+      "subscribeInstruction": "Hot info about new scene releases!"
+    },
+    {
+      "id": 9,
+      "categoryID": 3,
+      "subscribeName": "Releaselog Movies",
+      "subscribeInstruction": "Hot info about new scene releases!"
     }
   ],
   "userInfos": [
@@ -46,6 +116,41 @@
       "userName": "snow@qq.com",
       "password": "123456",
       "id": 1
+    },
+    {
+      "userName": "a@q.com",
+      "password": "123456a",
+      "id": 2
+    },
+    {
+      "userName": "a@q.com",
+      "password": "123456a",
+      "id": 3
+    },
+    {
+      "userName": "a@q.com",
+      "password": "123456a",
+      "id": 4
+    },
+    {
+      "userName": "a@q.com",
+      "password": "123456a",
+      "id": 5
+    },
+    {
+      "userName": "a@q.com",
+      "password": "123456a",
+      "id": 6
+    },
+    {
+      "userName": "a@q.com",
+      "password": "123456a",
+      "id": 7
+    },
+    {
+      "userName": "a@q.com",
+      "password": "123456a",
+      "id": 8
     }
   ]
 }

@@ -5,121 +5,95 @@
     <title>TODO LIST</title>
     <link rel="stylesheet" type="text/css" href="./lib/bootstrap/dist/css/bootstrap.css">
     <style type="text/css">
-    .container{ background-image:url("images/dog.jpg");}
-    .header{position:relative;}
-    .user{ color: red; position: absolute; top:10px; right:50px; } 
-    .user span{ margin-right: 20px; cursor: pointer;}
-    .jumbotron{ background-color: black;color: white; margin-bottom: 0px; }
-    .navigation{ margin:5px 0px;}
+    /* .container{ background-image:url("images/dog.jpg");}*/
+    *{font-family: "微软雅黑"；}
+    .header{position:relative; background-image: url("image/bg1.jpg"); background-position: right center; height:150px; }
+    .pageTitle{ margin-left: 50px;}
+    .pageTitle lable:nth-child(1){font-size:80px;}
+    .pageTitle lable:nth-child(2){background-color:#009966; color:#FF99CC;}
+    .pageTitle lable:nth-child(4){position: relative; left:130px;top:-20px;  width: 290px; border-bottom:dotted 2px green;}
+    .user{ color: red; position: absolute; top:70px; right:50px; }
+    .user span{ margin-right: 30px; cursor: pointer; font-size:24px;color:#003333;background-color: #ccffff;}
+    .user span a{ text-decoration:none; color:#003333; font-size: 20px; margin-left:5px;}
+    /*.jumbotron{ color: white; margin-bottom: 0px; }*/
+    .navigation{ background-color:#15736E;}
     
     .navigation div ul li a{ text-decoration: none; color:#000;font-size: 18px; font-weight:bold; }
-    .subscribeArea{opacity:0.9; filter: alpha(opacity=90); background-color: #aaa; padding: 20px 20px 20px 10px; }
+    .subscribeArea{/*poacity:0.9; filter: alpha(opacity=90);*/ background-image: url("image/bg2.jpg"); background-position: left top; padding: 20px 20px 20px 10px; }
     .subscribeArea ul { margin:20px 0px;}
     .subscribeArea ul li { border-radius: 10px; }
-    .subscribeArea ul li a{ color:#000;font-size: 16px; font-weight:bold; }
+    .subscribeArea ul li a{ color:#003300;font-size: 16px; font-weight:bold; }
     #right-column{ padding:10px; }
     .bookContain{ border-bottom: solid 2px #eee; padding: 10px; }
     .book-instruction{clear:both; padding: 10px 50px; margin-top:10px;}
+    a:hover{ color:red; }
     </style>
   </head>
   <body>
     <div class="container" >
-      <div class="row header ">
-        <div class=" col-lg-12 jumbotron text-center " >
-          <h1>狗耳朵</h1>
-          <p>全文RSS推送服务，支持Kindle、多看和Nook等移动电子阅读设备</p>
+        <!--  头部 -->
+        <div class="row header ">
+            <!--  标题区域 -->
+            <div class="pageTitle">
+              <lable >dogear</lable>
+              <lable >&nbsp;&nbsp;&nbsp;全&nbsp;文&nbsp;R&nbsp;S&nbsp;S&nbsp;推&nbsp;送&nbsp;服&nbsp;务&nbsp;&nbsp;</lable>
+              <br>
+              <lable>支持Kindle、多看和Nook等移动电子阅读设备</lable>
+            </div>
+            <!-- 用户登录注册区域 -->
+            <div class="user">
+              <span class="glyphicon glyphicon-user"><a href="login.html">登录</a></span>
+              <span class="glyphicon glyphicon-pencil"><a href="register.html">注册</a></span>
+            </div>
         </div>
-         <div class="user">
-          <span><a href="login.html">登录</a></span>
-          <span><a href="register.html">注册</a></span>
-        </div>
-      </div>
-      <div class="row navigation">
-        <div class=" col-lg-8 col-lg-offset-2">
-          <ul class=" nav nav-pills nav-justified col-lg-9">
-            <li role="presentation" ><a href="#">推荐</a></li>
-            <li role="presentation" ><a href="#">全部</a></li>
-            <li role="presentation" > <a href="#">排行榜</a></li>
-            <li role="presentation" ><a href="#">杂志</a></li>
-            <li role="presentation" ><a href="#">我的订阅</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="row subscribeArea">
-        <div class="left-column col-lg-3" >
-          <input type="text" class="form-control" placeholder="搜索" style="position: relative;">
-          <span class=" glyphicon glyphicon-search" aria-hidden="true" style="position: absolute; top: 10px; right:30px;">
-          </span>
-          </input>
-          <!-- <form  role="search" class="clearfix" >
-            <div class=" pull-left" style="width:80%;">
-              
-            </div>
-            <button type="submit" class="btn btn-default pull-right" style="width:20%;" >搜索</button>
-          </form> -->
-          
-          
-          <ul  id="categoryList" class="nav nav-pills nav-stacked text-center ">
-            <li role="presentation"><a href="#">全部</a></li>
-            <!-- <li role="presentation"><a href="#">×ÊÑ¶</a></li>
-            <li role="presentation"><a href="#">²©¿Í</a></li>
-            <li role="presentation"><a href="#">Ñ§Ï°</a></li>
-            <li role="presentation"><a href="#">ÓéÀÖ</a></li>
-            <li role="presentation"><a href="#">ÔÓÖ¾</a></li>
-            <li role="presentation"><a href="#">ÎÄÑ§</a></li>
-            <li role="presentation"><a href="#">¿Æ¼¼</a></li>
-            <li role="presentation"><a href="#">²Æ¾­</a></li> -->
-          </ul>
-        </div>
-        <div id="rbight-column" class=" col-lg-9 panel panel-default"  >
-          <div class="bookContain">
-            <div class="book-name pull-left ">
-              <img src="images/1.jpg" width="20px" height="20px">
-              <a >书籍名字</a>
-            </div>
-            <div  class="pull-right">  <button class="btn btn-default  " >订阅</button></div>
-            <div class="book-instruction " >
-              功能介绍：小道消息,只有小道消息才能拯救中国互联网;只有小道消息才能拯救中国创业者. 不关注小道消息,关注谁?
-            </div>
-            <div class="book-subscribeMessage" style="text-align: right;">时间.订阅人数
-            </div>
-          </div>
-          <div class="bookContain">
-            <div class="book-name pull-left ">
-              <img src="images/1.jpg" width="20px" height="20px">
-              <a >书籍名字</a>
-            </div>
-            <div  class="pull-right">  <button class="btn btn-default  " >订阅</button></div>
-            <div class="book-instruction " >
-              功能介绍：小道消息,只有小道消息才能拯救中国互联网;只有小道消息才能拯救中国创业者. 不关注小道消息,关注谁?
-            </div>
-            <div class="book-subscribeMessage" style="text-align: right;">时间.订阅人数
-            </div>
-          </div>
-          <div class="bookContain">
-            <div class="book-name pull-left ">
-              <img src="images/1.jpg" width="20px" height="20px">
-              <a >书籍名字</a>
-            </div>
-            <div  class="pull-right">  <button class="btn btn-default  " >订阅</button></div>
-            <div class="book-instruction " >
-              功能介绍：小道消息,只有小道消息才能拯救中国互联网;只有小道消息才能拯救中国创业者.
-            </div>
-            <div class="book-subscribeMessage" style="text-align: right;">时间.订阅人数
-            </div>
+        <!-- 导航条 -->
+        <div class="row navigation">
+          <div class=" col-lg-8 col-lg-offset-2">
+            <ul class=" nav nav-pills nav-justified col-lg-9">
+              <li role="presentation" ><a href="#">推荐</a></li>
+              <li role="presentation" ><a href="#">全部</a></li>
+              <li role="presentation" > <a href="#">排行榜</a></li>
+              <li role="presentation" ><a href="#">杂志</a></li>
+              <li role="presentation" ><a href="#">我的订阅</a></li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <form class="navbar-form navbar-left" role="search">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search">
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-  </form>
-</body>
-<script src="/lib/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
-<script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
+        <!-- 主体区域 -->
+        <div class="row subscribeArea">
+            <!-- 左边区域 -->
+            <div class="left-column col-lg-3" >
+                <!-- 搜索查询区域 -->
+                <div class="search" style="position: relative;" >             
+                    <input type="text " class="form-control" placeholder="搜索" >
+                    <span class=" glyphicon glyphicon-search" aria-hidden="true" style="position: absolute; top: 10px; right:30px;">
+                    </span>
+                </div>
+                <!-- 分类列表  -->         
+                <ul  id="categoryList" class="nav nav-pills nav-stacked text-center ">
+                    <li role="presentation"><a href="#" onclick="loadSubcribeItems()">全部</a></li>
+                </ul>
+            </div>
+            <!-- 右边区域 -->
+            <div id="rbight-column" class=" col-lg-9 panel panel-default"  >
+                <!-- 书本容器 -->
+                <div class="bookContain">
+                    <div class="book-name pull-left ">
+                        <img src="images/1.jpg" width="20px" height="20px">
+                        <a >书籍名字</a>
+                    </div>
+                    <div class="pull-right">  
+                        <button class="btn btn-default  "  >订阅</button>
+                    </div>
+                    <div class="book-instruction " >
+                      功能介绍：小道消息,只有小道消息才能拯救中国互联网;只有小道消息才能拯救中国创业者. 不关注小道消息,关注谁?
+                    </div>
+                    <div class="book-subscribeMessage" style="text-align: right;">时间.订阅人数
+                    </div>
+                </div>               
+            </div>
+        </div>
+    </div>  
+  </body>
+  <script src="/lib/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/js/index.js" type="text/javascript" charset="utf-8"></script>
 </html>
